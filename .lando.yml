@@ -35,3 +35,10 @@ dejavu:
     - drush locale-update
     - drush updatedb -y
     - drush cr
+locale:
+  service: appserver
+  description: Check and update locale and do cache rebuild.
+  cmd:
+    - drush locale-check
+    - drush locale-update
+    - drush cr
