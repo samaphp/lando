@@ -1,0 +1,15 @@
+name: example
+recipe: drupal8
+config:
+  webroot: .
+  drush: "*"
+  php: '7.3'
+  database: mysql:5.7.27
+  framework: drupal
+  env: dev
+proxy:
+  appserver:
+    - local.example.com
+tooling:
+  drush:
+    cmd: /usr/local/bin/drush
