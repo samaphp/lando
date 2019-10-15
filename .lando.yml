@@ -25,3 +25,13 @@ tooling:
       - drush locale-update
       - drush updatedb -y
       - drush cr
+dejavu:
+  service: appserver
+  description: Import and apply new config changes (the same automated action that happend before).
+  cmd:
+    - composer install
+    - drush config-import sync -y
+    - drush locale-check
+    - drush locale-update
+    - drush updatedb -y
+    - drush cr
