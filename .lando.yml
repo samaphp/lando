@@ -53,3 +53,8 @@ services:
     portforward: false
     hogfrom:
       - appserver
+events:
+  post-start:
+    - echo "██████ App started! ██████"
+  pre-destroy:
+    - echo "██████ App before destroy! ██████"
