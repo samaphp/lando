@@ -48,3 +48,8 @@ services:
     overrides:
       environment:
         PHP_IDE_CONFIG: "serverName=appserver"
+  mymailhog:
+    type: mailhog
+    portforward: false
+    hogfrom:
+      - appserver
