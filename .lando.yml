@@ -42,3 +42,9 @@ locale:
     - drush locale-check
     - drush locale-update
     - drush cr
+services:
+  appserver:
+    xdebug: true
+    overrides:
+      environment:
+        PHP_IDE_CONFIG: "serverName=appserver"
