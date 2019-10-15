@@ -13,3 +13,15 @@ proxy:
 tooling:
   drush:
     cmd: /usr/local/bin/drush
+  abracadabra:
+    service: appserver
+    description: Install Drupal per my requirements.
+    cmd:
+      - composer install
+      - drush si minimal --db-url=mysql://drupal8:drupal8@database.example.internal:3306/drupal8 --site-name=example-automated -y
+      - drush cset system.site uuid MY_CUSTOM_UUID_HERE -y
+      - drush config-import sync -y
+      - drush locale-check
+      - drush locale-update
+      - drush updatedb -y
+      - drush cr
