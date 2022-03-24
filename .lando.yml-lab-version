@@ -31,4 +31,6 @@ tooling:
       - echo "██████ Use these credentials admin/admin or the following URL ██████"
       - drush uli
       - echo 'sudo sh -c "echo '\''127.0.0.1 local.lab'\'' >> /etc/hosts"'
+      - wget https://raw.githubusercontent.com/samaphp/lando-drupal8/master/example.gitignore
+      - mv example.gitignore .gitignore
 
