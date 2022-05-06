@@ -26,6 +26,7 @@ tooling:
       - sh -c "echo '\$config['\''system.logging'\'']['\''error_level'\''] = '\''verbose'\'';' >> web/sites/default/settings.php"
       - sh -c "echo '\$config['\''system.performance'\'']['\''css'\'']['\''preprocess'\''] = FALSE;' >> web/sites/default/settings.php"
       - sh -c "echo '\$config['\''system.performance'\'']['\''js'\'']['\''preprocess'\''] = FALSE;' >> web/sites/default/settings.php"
+      - drush cset devel.settings devel_dumper var_dumper -y
       - drush cr
       - echo "██████ Installation process has been finished successfully ██████"
       - echo "██████ Use these credentials admin/admin or the following URL ██████"
