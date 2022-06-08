@@ -19,7 +19,7 @@ tooling:
       - mv recommended-project/* ./
       - rm -rf recommended-project
       - composer require drupal/admin_toolbar drupal/devel drush/drush -n
-      - drush si standard --db-url=mysql://drupal9:drupal9@database.randomname.internal:3306/drupal9 --site-name=automated -y --account-pass=admin -y
+      - drush si standard --db-url=mysql://drupal9:drupal9@database:3306/drupal9 --site-name=automated -y --account-pass=admin -y
       - drush en admin_toolbar_tools devel -y
       - drush pmu update -y
       - chmod 0777 web/sites/default/settings.php
