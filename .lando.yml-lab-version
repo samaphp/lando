@@ -27,6 +27,8 @@ tooling:
       - sh -c "echo '\$config['\''system.performance'\'']['\''css'\'']['\''preprocess'\''] = FALSE;' >> web/sites/default/settings.php"
       - sh -c "echo '\$config['\''system.performance'\'']['\''js'\'']['\''preprocess'\''] = FALSE;' >> web/sites/default/settings.php"
       - drush cset devel.settings devel_dumper var_dumper -y
+      - drush theme:enable bartik -y
+      - drush config-set system.theme default bartik -y
       - drush cr
       - echo "██████ Installation process has been finished successfully ██████"
       - echo "██████ Use these credentials admin/admin or the following URL ██████"
