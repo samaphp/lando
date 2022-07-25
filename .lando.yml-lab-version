@@ -6,9 +6,6 @@ config:
   database: mariadb:10.6
   framework: drupal
   env: dev
-proxy:
-  appserver:
-    - local.lab
 tooling:
   letsdoit:
     service: appserver
@@ -31,7 +28,6 @@ tooling:
       - echo "██████ Installation process has been finished successfully ██████"
       - echo "██████ Use these credentials admin/admin or the following URL ██████"
       - drush uli
-      - echo 'sudo sh -c "echo '\''127.0.0.1 local.lab'\'' >> /etc/hosts"'
       - wget https://raw.githubusercontent.com/samaphp/lando/master/example.gitignore
       - mv example.gitignore .gitignore
 
