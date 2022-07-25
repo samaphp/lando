@@ -1,6 +1,7 @@
 # mkdir PROJECTNAME && cd PROJECTNAME && wget https://raw.githubusercontent.com/samaphp/lando/master/.lando.yml-lab-version -O.lando.yml
 # change the name property then: lando start && lando letsdoit
-# @todo: automate second step
+# @todo automate second step
+# @todo create custom folder and custom module with event subscriber and simple config form
 name: randomname
 recipe: drupal9
 config:
