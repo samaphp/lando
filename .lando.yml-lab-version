@@ -23,10 +23,10 @@ tooling:
       - mv recommended-project/* ./
       - rm -rf recommended-project
       - composer config minimum-stability dev
-      - composer require drupal/admin_toolbar drush/drush -n
+      - composer require drupal/admin_toolbar drush/drush drupal/whoops -n
       - composer require drupal/devel -n --dev
       - drush si standard --db-url=mysql://drupal9:drupal9@database:3306/drupal9 --site-name=automated -y --account-pass=admin -y
-      - drush en admin_toolbar_tools devel -y
+      - drush en admin_toolbar_tools devel whoops -y
       - drush pmu update -y
       - chmod 0777 web/sites/default/settings.php
       - sh -c "echo '\$config['\''system.logging'\'']['\''error_level'\''] = '\''verbose'\'';' >> web/sites/default/settings.php"
