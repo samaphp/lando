@@ -19,7 +19,7 @@ tooling:
     description: Install my flavor test website.
     cmd:
       - echo "██████ Salam! Please take a rest this process will take a couple of minutes ██████"
-      - composer create drupal/recommended-project -n
+      - composer create drupal/recommended-project:^9 -n
       - mv recommended-project/* ./
       - rm -rf recommended-project
       - composer config minimum-stability dev
